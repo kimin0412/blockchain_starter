@@ -1,6 +1,13 @@
-# readmExample
+# Development Log
 
-> 리드미 양식입니다. 꼭 따라야 할 필요는 없지만 뭘 넣을 지 고민된다면 참고해주세요
+> 2020/08/31 MON   
+> BlockChain Skeleton Code - git clone Complete. 
+> README.md Updated. 
+> Virtual Box 설치 완료 
+> Vagrant 설치 완료 
+> Virtual Box, Vagrant 연동 완료 
+> 2 Node (eth0, eth1) 생성 완료
+> Virtual Box, Vagrant 구동 확인 완료
 
 ## 목차
 - [개요](#개요)
