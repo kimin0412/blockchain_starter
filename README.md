@@ -10,7 +10,13 @@
 > - Virtual Box, Vagrant 구동 확인 완료   
 
 > ### 2020/09/01 TUE   
-> fff
+> - BlockChain Skeleton Code - git clone Complete.   
+> - README.md Updated.   
+> - Virtual Box 설치 완료   
+> - Vagrant 설치 완료   
+> - Virtual Box, Vagrant 연동 완료   
+> - 2 Node (eth0, eth1) 생성 완료   
+> - Virtual Box, Vagrant 구동 확인 완료   
 
 ## 목차
 - [개요](#개요)
