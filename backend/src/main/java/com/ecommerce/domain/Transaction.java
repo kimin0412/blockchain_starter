@@ -27,7 +27,159 @@ public class Transaction {
     private int v;
     private LocalDateTime storedAt;
 
-    public Transaction() { }
+    public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getHash() {
+		return hash;
+	}
+
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+
+	public String getNonce() {
+		return nonce;
+	}
+
+	public void setNonce(String nonce) {
+		this.nonce = nonce;
+	}
+
+	public String getBlockHash() {
+		return blockHash;
+	}
+
+	public void setBlockHash(String blockHash) {
+		this.blockHash = blockHash;
+	}
+
+	public String getBlockNumber() {
+		return blockNumber;
+	}
+
+	public void setBlockNumber(String blockNumber) {
+		this.blockNumber = blockNumber;
+	}
+
+	public String getTransactionIndex() {
+		return transactionIndex;
+	}
+
+	public void setTransactionIndex(String transactionIndex) {
+		this.transactionIndex = transactionIndex;
+	}
+
+	public String getFrom() {
+		return from;
+	}
+
+	public void setFrom(String from) {
+		this.from = from;
+	}
+
+	public String getTo() {
+		return to;
+	}
+
+	public void setTo(String to) {
+		this.to = to;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public String getGasPrice() {
+		return gasPrice;
+	}
+
+	public void setGasPrice(String gasPrice) {
+		this.gasPrice = gasPrice;
+	}
+
+	public String getGas() {
+		return gas;
+	}
+
+	public void setGas(String gas) {
+		this.gas = gas;
+	}
+
+	public String getInput() {
+		return input;
+	}
+
+	public void setInput(String input) {
+		this.input = input;
+	}
+
+	public String getCreates() {
+		return creates;
+	}
+
+	public void setCreates(String creates) {
+		this.creates = creates;
+	}
+
+	public String getPublicKey() {
+		return publicKey;
+	}
+
+	public void setPublicKey(String publicKey) {
+		this.publicKey = publicKey;
+	}
+
+	public String getRaw() {
+		return raw;
+	}
+
+	public void setRaw(String raw) {
+		this.raw = raw;
+	}
+
+	public String getR() {
+		return r;
+	}
+
+	public void setR(String r) {
+		this.r = r;
+	}
+
+	public String getS() {
+		return s;
+	}
+
+	public void setS(String s) {
+		this.s = s;
+	}
+
+	public int getV() {
+		return v;
+	}
+
+	public void setV(int v) {
+		this.v = v;
+	}
+
+	public LocalDateTime getStoredAt() {
+		return storedAt;
+	}
+
+	public void setStoredAt(LocalDateTime storedAt) {
+		this.storedAt = storedAt;
+	}
+
+	public Transaction() { }
 
     public Transaction(final EthBlock.TransactionResult txResult)
     {
@@ -54,4 +206,5 @@ public class Transaction {
         this.v = (int) tx.getV();
         this.storedAt = LocalDateTime.now();
     }
+
 }

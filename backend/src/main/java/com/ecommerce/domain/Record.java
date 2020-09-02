@@ -28,7 +28,35 @@ public class Record {
         return record;
     }
 
-    private static String getStateString(BigInteger number) {
+    private void setBy(String value3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setWhen(LocalDateTime ofInstant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setState(String stateString) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	public String getState() {
+		return state;
+	}
+
+	public LocalDateTime getWhen() {
+		return when;
+	}
+
+	public String getBy() {
+		return by;
+	}
+
+	private static String getStateString(BigInteger number) {
         switch(number.intValue()) {
             case 0:
                 return "Purchased";
@@ -48,4 +76,5 @@ public class Record {
                 return "";
         }
     }
+
 }
