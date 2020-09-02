@@ -16,7 +16,105 @@ public class Purchase {
     private LocalDateTime createdAt;
     private String contractAddress;
 
-    @Override
+    
+    
+    public long getId() {
+		return id;
+	}
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+	public long getPurchaseId() {
+		return purchaseId;
+	}
+
+
+
+	public void setPurchaseId(long purchaseId) {
+		this.purchaseId = purchaseId;
+	}
+
+
+
+	public String getState() {
+		return state;
+	}
+
+
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+
+
+	public long getSellerId() {
+		return sellerId;
+	}
+
+
+
+	public void setSellerId(long sellerId) {
+		this.sellerId = sellerId;
+	}
+
+
+
+	public long getBuyerId() {
+		return buyerId;
+	}
+
+
+
+	public void setBuyerId(long buyerId) {
+		this.buyerId = buyerId;
+	}
+
+
+
+	public long getItemId() {
+		return itemId;
+	}
+
+
+
+	public void setItemId(long itemId) {
+		this.itemId = itemId;
+	}
+
+
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+
+
+	public String getContractAddress() {
+		return contractAddress;
+	}
+
+
+
+	public void setContractAddress(String contractAddress) {
+		this.contractAddress = contractAddress;
+	}
+
+
+
+	@Override
     public String toString()
     {
         return "{ id: " + id +
@@ -29,4 +127,5 @@ public class Purchase {
                 "\n\tcontractAddress: " + contractAddress +
                 " }";
     }
+
 }
