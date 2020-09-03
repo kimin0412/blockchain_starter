@@ -55,7 +55,11 @@
 
 ## 유사 서비스
 > #### [헥슬란트의 블록체인 서비스 '옥텟'](https://octet.hexlant.com/)   
-> ![옥텟 이미지](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F.PNG)
+> ![옥텟 이미지](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F.PNG)    
+> ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F2.PNG)   
+> ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F3.PNG)   
+> ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F4.PNG)   
+> 헥슬란트의 블록체인 서비스 '옥텟'은 
 
 ## 향후 전망 
 > 스마트 컨트랙트가 아직 불안정한 부분이 있습니다.   
