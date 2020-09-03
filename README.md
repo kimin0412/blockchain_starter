@@ -57,16 +57,16 @@
 > #### [헥슬란트의 블록체인 서비스 '옥텟'](https://octet.hexlant.com/)   
 > ![옥텟 이미지](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F.PNG)
 
-## 향후 전망
-> 스마트 컨트랙트가 아직 불안정한 부분이 있습니다.
-> 노드끼리 연결이 되었으나 송금을 할때 pending에서 멈추는 경우가 가끔 생겨서 다음 프로젝트에는 좀더 꼼꼼히 공부한 후 해결할 예정입니다.
+## 향후 전망 
+> 스마트 컨트랙트가 아직 불안정한 부분이 있습니다.   
+> 노드끼리 연결이 되었으나 송금을 할때 pending에서 멈추는 경우가 가끔 생겨서 다음 프로젝트에는 좀더 꼼꼼히 공부한 후 해결할 예정입니다.   
 
 ## 기술 스택
-> Oracle VM VirtualBox, Vagrant로 가상머신을 통해 Ubuntu 환경을 구성하였습니다.
-> Go-Ethereum, Solidity 등으로 블록체인 이더리움을 구현하였습니다.
-> BackEnd는 Spring STS로 구현하였습니다.
-> DB는 Mysql로 연결하였습니다.
-> FrontEnd는 Vue를 사용하였습니다.
+> Oracle VM VirtualBox, Vagrant로 가상머신을 통해 Ubuntu 환경을 구성하였습니다.   
+> Go-Ethereum, Solidity 등으로 블록체인 이더리움을 구현하였습니다.   
+> BackEnd는 Spring STS로 구현하였습니다.   
+> DB는 Mysql로 연결하였습니다.   
+> FrontEnd는 Vue를 사용하였습니다.   
 
 
 ## 기술 설명
