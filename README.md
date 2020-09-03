@@ -10,13 +10,26 @@
 > - Virtual Box, Vagrant 구동 확인 완료   
 
 > ### 2020/09/01 TUE   
-> - BlockChain Skeleton Code - git clone Complete.   
-> - README.md Updated.   
-> - Virtual Box 설치 완료   
-> - Vagrant 설치 완료   
-> - Virtual Box, Vagrant 연동 완료   
-> - 2 Node (eth0, eth1) 생성 완료   
-> - Virtual Box, Vagrant 구동 확인 완료   
+> - eth0, eth1 노드 설정 완료   
+> - Geth 설치 완료.   
+> - 환경변수 설정 -> 오류로 인해 중단   
+> - Geth 설정 완료.   
+> - 마이닝 완료   
+> - 마이닝 후 잔액 확인 -> 오류   
+> - 노드 연결 -> 오류   
+
+> ### 2020/09/02 WED   
+> - skeleton code FrontEnd 실행 완료   
+> - skeleton code BackEnd JRE 버전 동기화 완료   
+> - BackEnd에 Getter, Setter 추가 완료.   
+
+> ### 2020/09/03 THUR   
+> - skeleton code FrontEnd config 수정 완료   
+> - Geth 환경변수 설정 완료
+> - 마이닝 후 잔액 증가 안되는 오류 해결
+> - 노드 연결 완료
+> - 트랜잭션 설정 진행중...
+
 
 ## 목차
 - [개요](#개요)
@@ -31,7 +44,7 @@
 - [테스트 방법](#테스트-방법)
 
 ## 개요
-> 프로젝트를 간략하게 설명해주세요  
+>   
 > 프로젝트를 개발하게 된 동기도 들어가 있으면 좋습니다.
 
 ## 기능
