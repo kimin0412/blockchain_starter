@@ -59,7 +59,9 @@
 > ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F2.PNG)   
 > ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F3.PNG)   
 > ![](https://plog-image.s3.ap-northeast-2.amazonaws.com/%EC%98%A5%ED%85%9F4.PNG)   
-> 헥슬란트의 블록체인 서비스 '옥텟'은 
+> 헥슬란트의 블록체인 서비스 '옥텟'은 개발자는 라이브러리 개발없이 블록체인 서비스 개발에 집중할 수 있고,    
+> 기획자는 메인넷 제약 없이 블록체인 비즈니스를 연구할 수 있으며,   
+> 운영자는 CS부터 고객지원을 최대의 품질로 대응할 수 있는 블록체인 개발자도구입니다.
 
 ## 향후 전망 
 > 스마트 컨트랙트가 아직 불안정한 부분이 있습니다.   
@@ -73,17 +75,108 @@
 > FrontEnd는 Vue를 사용하였습니다.   
 
 
-## 기술 설명
+## 개발 단계
+### 1. 개발 환경 구성
+#### 1) 스켈레톤 프로젝트 내려받기   
+``` 
+* 원하는 위치에 스켈레톤 프로젝트 다운로드 
+> git clone https://lab.ssafy.com/s03-blockchain-sub1/blockchain-skeleton.git
+```
+#### 2) 가상 머신 구성
+#### - VirtualBox 설치
+#### - Vagrant 설치
+```
+* 설치 여부 및 버전 확인
+> vagrant version
 
-### ERD
-> DB 및 백엔드를 구현할 때 ERD를 그려보고 리드미에 남겨주세요
+* 호스트와 가상 머신 간 파일 전송 플러그인 설치
+> vagrant plugin install vagrant-scp
+```
+#### - 가상 머신 생성 및 구동
+```
+* 원하는 작업 디렉토리에서 Vagrant 초기화 (설정 파일 생성)
+> vagrant init
 
-### 디렉토리 구조도
-> 폴더 구조가 어떻게 되는지 폴더, 파일별 역할들을 간략하게 적어주세요  
-> 너무 자세히 적을 필요는 없습니다
 
-### 기타
-> 이외에도 프로젝트를 이해하기 위해 필요한 것들을 적어주세요 (팀별 개발표준, API Documentation 등등...)
+* 생성된 Vagrantfile의 내용 수정
 
-## 테스트 방법
-> 프로젝트를 배포한 url과 테스트하기 위한 계정 ID/PW를 적어주세요
+VAGRANT_API_VERSION = "2"
+
+vms = {
+  'eth0' => '10',
+  'eth1' => '11'
+}
+
+Vagrant.configure(VAGRANT_API_VERSION) do |config|
+  config.vm.box = "ubuntu/bionic64"
+  vms.each do |key, value|
+    config.vm.define "#{key}" do |node|
+      node.vm.network "private_network", ip: "192.168.50.#{value}"
+      if "#{key}" == "eth0"
+        node.vm.network "forwarded_port", guest: 8545, host: 8545
+      end
+      node.vm.hostname = "#{key}"
+      node.vm.provider "virtualbox" do |nodev|
+        nodev.memory = 2048
+      end
+    end
+  end
+end
+
+
+* 가상 머신 구동 명령어 실행
+> vagrant up
+
+
+* 가상머신 구동 상태 확인
+> vagrant status
+
+
+* 가상 머신 접속(eth, eth1)
+> vagrant ssh eth0
+> vagrant ssh eth1
+```
+#### - eth0, eth1 노드별 Geth 설치
+```
+* ethereum 폴더 생성 후 해당 폴더로 이동
+> mkdir ethereum && cd ethereum
+
+
+* go-ethereum git에서 받아오기
+> git clone https://github.com/ethereum/go-ethereum.git
+
+
+* Geth 설치
+> sudo apt-get update
+> sudo apt-get install software-properties-common
+> sudo add-apt-repository -y ppa:ethereum/ethereum
+> sudo apt-get install ethereum
+> geth version
+
+
+* Go Language 설치
+> wget https://dl.google.com/go/go1.14.7.linux-amd64.tar.gz
+> tar xf go1.14.7.linux-amd64.tar.gz
+> sudo mv go /usr/local/go-1.14
+
+
+* 환경변수 설정
+> export GOROOT=/usr/local/go-1.14
+> export PATH=$GOROOT/bin:$PATH
+
+* 빌드하기
+# make all 에러 방지를 위한 build-essential 설치
+> sudo apt-get install build-essential
+
+# 폴더로 이동 후 빌드
+> cd go-ethereum/
+> make all
+
+
+* Geth 환경변수 설정
+> export GETH=/home/vagrant/ethereum/go-ethereum
+> export PATH="$PATH:$GETH/build/bin"
+>
+```
+
+
